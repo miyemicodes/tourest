@@ -197,29 +197,31 @@ body{
 
 .card-banner{background: var(--silver-chalice); }
 
-:is(.popular) .section-subtitle{
+:is(.popular, .blog) .section-subtitle{
   text-align: center;
   margin-bottom:10px;
 }
 
-:is(.popular) .section-title{
+:is(.popular, .blog) .section-title{
   text-align: center;
   margin-bottom:50px;
 }
 
-.popular-list{
+.popular-list,
+.blog-list{
   display: grid;
   gap: 30px;
 }
 
-.popular-card{
+.popular-card,
+.blog-card{
   box-shadow: 0 10px 30px hsla(0, 0%, 0%, 0.2);
   border-radius:var(--radius-6);
   overflow: hidden;
 }
 
 
-:is(.popular) .card-banner{   position: relative; }
+:is(.popular, .blog) .card-banner{   position: relative; }
  
 .card-barge{
   position: absolute;
@@ -239,7 +241,7 @@ body{
 
 .card-barge time {  font-weight: var(--fw-700); }
  
-:is(.popular) .card-content{ padding:30px 15px; }
+:is(.popular, .blog) .card-content{ padding:30px 15px; }
 
 .card-wrapper{
   display: flex;
@@ -248,15 +250,15 @@ body{
   gap: 20px;
 }
 
-:is(.popular) .card-title{ 
+:is(.popular, .blog) .card-title{ 
 color: var(--granite-gray);
 font-size: var(--fs-5);
 margin-block: 20px;
 }
 
-:is(.popular) .card-title > a {color: inherit;}
+:is(.popular, .blog) .card-title > a {color: inherit;}
 
-:is(.popular) .card-title > a:is(:hover, :focus) {color: var(--viridian-green);}
+:is(.popular, .blog) .card-title > a:is(:hover, :focus) {color: var(--viridian-green);}
 
 /*-------------HEADER-------------*/
 
@@ -497,4 +499,41 @@ background:linear-gradient(hsla(222, 46%,20%,0.1), hsla(222, 46%,20%,0.6));
   margin-bottom: 6px;
 }
 
-.card-banner{position: relative;}
+
+/*-----
+   BLOG..... 
+------*/
+
+.blog{padding-bottom: 100px;}
+
+.blog-card .author-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.blog-card .card-wrapper{
+color: var(--spanish-gray);
+font-size: var(--fs-8);
+justify-content: space-between;
+}
+
+.author-name{
+  color: var(--granite-gray);
+  font-weight: var(--fw-600);
+}
+
+.btn-link{
+  color: var(--viridian-green);
+  font-weight: var(--fw-700);
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-link ion-icon{font-size: 20px;}
+
+.btn-link:is(:hover, :focus) {color: var(--oxford-blue);}
+
+
